@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: "diplomado-kafka-invoice-consumer"
+  pulsar:
+    producer:
+      topic-name: "restaurant_invoice"
+    client:
+      service-url: "pulsar://${PULSAR_HOST:localhost}:${PULSAR_PORT:6650}"
+
+server:
+  port: 8082
+
+application:
+  kafka:
+    host: ${KAFKA_HOST:localhost}
+    port: ${KAFKA_PORT:9092}
